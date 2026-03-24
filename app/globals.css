@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-bg: #080909;
+  --color-surface: #0f1011;
+  --color-border: #1a2e2c;
+  --color-muted: #334155;
+  --color-body: #94a3b8;
+  --color-heading: #e2e8f0;
+  --color-teal: #5eead4;
+  --color-teal-dark: #0d9488;
+
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-jetbrains);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --cursor-x: -500px;
+  --cursor-y: -500px;
+}
+
+html {
+  scroll-behavior: auto;
+  background: #080909; /* canvas sits at z-index:-1, html bg prevents bleed-through */
+}
+
+body {
+  background: transparent;
+  color: #94a3b8;
+  font-family: var(--font-inter), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  cursor: none;
+}
+
+@media (pointer: coarse) {
+  body { cursor: auto; }
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9998;
+  background: radial-gradient(
+    600px circle at var(--cursor-x) var(--cursor-y),
+    rgba(94, 234, 212, 0.06),
+    transparent 40%
+  );
+}
+
+@media (pointer: coarse) {
+  body::before { display: none; }
+}
+
+::selection {
+  background: rgba(94, 234, 212, 0.15);
+  color: #5eead4;
+}
+
+::-webkit-scrollbar {
+  width: 3px;
+}
+::-webkit-scrollbar-track {
+  background: #080909;
+}
+::-webkit-scrollbar-thumb {
+  background: #1a2e2c;
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(94, 234, 212, 0.3);
+}
+
+.section-label {
+  font-family: var(--font-jetbrains), monospace;
+  font-size: 12px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #5eead4;
+  opacity: 0.7;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
