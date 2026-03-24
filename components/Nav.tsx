@@ -28,7 +28,10 @@ export default function Nav() {
   const [hovered, setHovered] = useState('')
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 40)
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 40)
+      if (window.scrollY < 120) setActive('')
+    }
     window.addEventListener('scroll', handleScroll, { passive: true })
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
@@ -99,7 +102,7 @@ export default function Nav() {
         onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.opacity = '0.75' }}
         onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.opacity = '1' }}
       >
-        AA_
+        alben.
       </a>
 
       <div

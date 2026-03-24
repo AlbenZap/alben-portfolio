@@ -223,7 +223,7 @@ export default function Contact() {
 
       <div
         style={{
-          marginTop: '160px',
+          marginTop: '200px',
           width: '100%',
           textAlign: 'center',
           borderTop: '1px solid #1a2e2c',

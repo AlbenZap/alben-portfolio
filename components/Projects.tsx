@@ -226,7 +226,7 @@ export default function Projects() {
               overflow: 'hidden',
               position: 'relative',
               transition: 'border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease',
-              cursor: 'default',
+              cursor: project.github ? 'pointer' : 'default',
               display: 'flex',
               flexDirection: 'column',
             }}
@@ -245,6 +245,12 @@ export default function Projects() {
               el.style.boxShadow = 'none'
               const num = el.querySelector('.proj-num') as HTMLElement
               if (num) num.style.color = '#475569'
+            }}
+            onClick={(e) => {
+              if (!project.github) return
+              const target = e.target as HTMLElement
+              if (target.closest('button') || target.closest('a')) return
+              window.open(project.github, '_blank', 'noopener,noreferrer')
             }}
           >
             <div style={{ height: '2px', background: `linear-gradient(to right, ${project.accentColor}, transparent)`, flexShrink: 0 }} />

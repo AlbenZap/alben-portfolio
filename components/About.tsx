@@ -4,10 +4,16 @@ import { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 
 const stats = [
-  { value: 3, suffix: '+', label: 'years industry' },
-  { value: 6, suffix: '+', label: 'projects' },
-  { value: 8, suffix: '+', label: 'certifications' },
+  { value: 3, suffix: '+', label: 'years industry', href: '#experience' },
+  { value: 6, suffix: '+', label: 'projects', href: '#projects' },
+  { value: 8, suffix: '+', label: 'certifications', href: '#skills' },
 ]
+
+function scrollTo(id: string) {
+  const el = document.getElementById(id)
+  if (!el) return
+  el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+}
 
 export default function About() {
   const textRef = useRef<HTMLDivElement>(null)
@@ -59,7 +65,7 @@ export default function About() {
                 duration: 1.8,
                 ease: 'power2.out',
                 delay: i * 0.18,
-                onUpdate() { el.textContent = String(Math.floor(obj.val)) },
+                onUpdate() { el.textContent = String(Math.round(obj.val)) },
                 onComplete() { el.textContent = value + suffix },
               })
             })
@@ -170,13 +176,14 @@ export default function About() {
           <div
             key={stat.label}
             ref={(el) => { cardRefs.current[i] = el }}
+            onClick={() => scrollTo(stat.href.replace('#', ''))}
             style={{
               background: '#0f1011',
               border: '1px solid #1a2e2c',
               borderRadius: '4px',
               padding: '32px 20px',
               textAlign: 'center',
-              cursor: 'default',
+              cursor: 'pointer',
               willChange: 'transform',
             }}
             onMouseMove={handleTiltMove}

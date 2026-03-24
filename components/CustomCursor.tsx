@@ -22,11 +22,16 @@ export default function CustomCursor() {
     const setDotX = gsap.quickSetter(dot, 'x', 'px')
     const setDotY = gsap.quickSetter(dot, 'y', 'px')
 
+    let moved = false
     const onMove = (e: MouseEvent) => {
       mouse.x = e.clientX
       mouse.y = e.clientY
       setDotX(mouse.x)
       setDotY(mouse.y)
+      if (!moved) {
+        moved = true
+        gsap.to([dot, ring], { opacity: 1, duration: 0.3 })
+      }
     }
 
     const ticker = gsap.ticker.add(() => {
@@ -93,6 +98,7 @@ export default function CustomCursor() {
           pointerEvents: 'none',
           zIndex: 99999,
           mixBlendMode: 'difference',
+          opacity: 0,
         }}
       />
       <div
@@ -107,6 +113,7 @@ export default function CustomCursor() {
           border: '1px solid rgba(94,234,212,0.5)',
           pointerEvents: 'none',
           zIndex: 99998,
+          opacity: 0,
         }}
       />
     </>
