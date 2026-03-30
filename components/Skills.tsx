@@ -7,7 +7,7 @@ const skillGroups = [
   {
     category: 'Core',
     color: '#5eead4',
-    skills: ['Python', 'SQL', 'R', 'Power BI', 'Automation'],
+    skills: ['Python', 'SQL', 'R', 'Java', 'C/C++', 'Statistical Modeling', 'Feature Engineering', 'Data Wrangling', 'Automation'],
   },
   {
     category: 'Machine Learning',
@@ -17,12 +17,12 @@ const skillGroups = [
   {
     category: 'AI',
     color: '#c084fc',
-    skills: ['LLM', 'RAG', 'LangChain', 'FAISS', 'HuggingFace'],
+    skills: ['LLM', 'RAG', 'LangChain', 'LangSmith', 'FAISS', 'HuggingFace'],
   },
   {
     category: 'Data Engineering',
     color: '#fb923c',
-    skills: ['Spark', 'Kafka', 'Airflow', 'dbt', 'ETL'],
+    skills: ['PySpark', 'Spark', 'Kafka', 'Airflow', 'dbt', 'ETL', 'Distributed Processing', 'Relational Data Modeling'],
   },
   {
     category: 'Cloud & Platforms',
@@ -37,12 +37,12 @@ const skillGroups = [
   {
     category: 'Backend & APIs',
     color: '#34d399',
-    skills: ['Flask', 'FastAPI', 'RESTful API'],
+    skills: ['Flask', 'FastAPI', 'RESTful API', 'Streamlit'],
   },
   {
     category: 'DevOps & Tools',
     color: '#a78bfa',
-    skills: ['Git', 'CI/CD', 'Docker', 'Slurm', 'Apptainer', 'Bash', 'Shell'],
+    skills: ['Git', 'GitHub Actions', 'CI/CD', 'Docker', 'SLURM', 'Apptainer', 'Bash', 'Shell'],
   },
 ]
 

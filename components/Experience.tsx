@@ -15,11 +15,12 @@ const experiences = [
     location: 'Bloomington, IN',
     role: 'Graduate Research Assistant',
     bullets: [
-      'Built end-to-end HPC pipelines processing MRI, fMRI, and DTI datasets for 300+ subjects, generating structured analytical inputs for large-scale cohort modeling.',
-      'Developed Python-based signal denoising and statistical extraction modules to process MRI, fMRI, and DTI datasets, engineering clean feature sets for comparative cohort-level modeling.',
-      'Analyzed structural and functional brain connectivity networks across multiple atlases, standardizing hierarchical data structures and resolving data grouping anomalies to ensure accurate regional statistical analysis.',
+      'Deployed an LLM inference pipeline on H100 GPU partitions using GPT and LLaMA models to extract 199 NACC-defined variables from neuropathology reports, implementing ground truth comparison for output validation across multiple runs.',
+      'Architected a fault-tolerant neuroimaging data ingestion pipeline on an HPC cluster using Slurm array jobs and Apptainer containers, processing MRI/fMRI/DTI datasets for 300+ subjects with full subject isolation.',
+      'Automated end-to-end neuroimaging preprocessing (DICOM - BIDS - fMRIPrep/QSIPrep/QSIRecon) via Bash scripting with robust error handling and logging, guaranteeing reliable parallel execution across distributed compute nodes.',
+      'Mapped structural and functional brain connectivity networks across multiple atlases, resolving data grouping anomalies and standardizing hierarchical structures for accurate regional statistical analysis.',
     ],
-    tags: ['Python', 'HPC', 'Neuroimaging', 'Statistical Modeling'],
+    tags: ['Python', 'LLM', 'HPC', 'SLURM', 'Apptainer', 'Neuroimaging', 'FSL', 'FreeSurfer'],
   },
   {
     accentColor: '#7C2529',
@@ -30,10 +31,10 @@ const experiences = [
     location: 'Bloomington, IN',
     role: 'Graduate Research Assistant',
     bullets: [
-      'Harmonized FCC broadband data, U.S. Census records, and standardized test scores across 10,000+ school districts in Python to produce a unified dataset driving education equity analysis.',
-      'Applied statistical modeling and hypothesis testing in R across 70+ hospital units, quantifying shift workload complexity and identifying operational bottlenecks for healthcare operations research.',
+      'Built Python pipelines to scrape, clean, and transform large-scale FCC broadband and U.S. Census data across 10,000+ school districts, resolving schema inconsistencies and enabling the district-level joins that formed the backbone of a published education equity study.',
+      'Built reproducible R Markdown ETL workflows to standardize and harmonize 5 quarters of nurse engagement survey data across 70+ hospital units, producing correlation matrix visualizations across 13 survey dimensions for a healthcare operations study.',
     ],
-    tags: ['Python', 'R', 'Statistical Modeling', 'Data Visualization', 'Data Transformation'],
+    tags: ['Python', 'R', 'Data Wrangling', 'Statistical Analysis', 'Data Visualization'],
   },
   {
     accentColor: '#0070AD',
@@ -44,12 +45,12 @@ const experiences = [
     location: 'Mumbai, India',
     role: 'Senior Analyst / Software Engineer',
     bullets: [
-      'Deployed predictive financial forecasting models across 7 business units and 25+ global regions, improving baseline accuracy by 15% and fully automating metric calculations that had previously required manual Excel workflows.',
-      'Built a Flask-based self-service analytics portal backed by RESTful APIs and optimized SQL pipelines, powering interactive Power BI dashboards that gave leadership real-time P&L and KPI visibility.',
-      'Led the migration of legacy ETL workflows and dashboards to Microsoft Fabric, redesigning data transformations to drastically reduce reporting latency and improve platform scalability.',
-      'Optimized time-series forecasting workflows using ARIMA models, achieving 25% faster processing while maintaining statistical validity.',
+      'Engineered scalable Python and SQL-based ETL pipelines for a global financial platform across 7 business units and 25+ regions, encoding complex business logic to replace manual Excel workflows and improve reporting accuracy by 15%.',
+      'Architected a self-service web portal backend using Flask and RESTful APIs, enabling automated real-time report generation and powering interactive Power BI dashboards tracking global P&L and financial KPIs.',
+      'Led end-to-end POC for enterprise migration of legacy ETL workflows to Microsoft Fabric, rebuilding the full system architecture and data transformation layer to reduce querying latency and improve scalability.',
+      'Optimized time-series forecasting simulations incorporating ARIMA models, achieving 25% faster execution through Python refactoring and MySQL query tuning while maintaining statistical validity.',
     ],
-    tags: ['Python', 'Flask', 'RESTful API', 'MySQL', 'MSSQL', 'DBMS', 'Power BI', 'ARIMA', 'ETL', 'Microsoft Fabric'],
+    tags: ['Python', 'SQL', 'Flask', 'REST API', 'Power BI', 'ETL', 'Microsoft Fabric', 'MySQL', 'ARIMA'],
   },
 ]
 
