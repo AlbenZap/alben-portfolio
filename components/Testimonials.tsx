@@ -19,9 +19,25 @@ const testimonials = [
   {
     quote: `I worked with Alben as a research assistant in the Faculty Assistance with Data Science program, where he focused on data analysis - both in Python and R. Alben handled cleaning and merging complex datasets, writing clear and reproducible code, and producing useful summary tables and figures. He communicated well, met deadlines reliably, and asked smart questions that moved the project forward. I would happily work with him again and recommend him for any role involving applied data analysis!`,
     name: 'RJ Niewoehner',
+    initials: 'RJ',
     title: 'Assistant Professor of Operations',
     institution: 'Kelley School of Business, Indiana University',
     accentColor: '#5eead4',
+    linkedin: 'https://www.linkedin.com/in/alben-antappan/details/recommendations/',
+  },
+  {
+    quote: `I had the pleasure of managing Alben for over three years, and he stands out as one of the most capable and reliable professionals I've worked with.
+
+He brings a strong combination of finance operations expertise and technical skills, including Python, web application development, SQL, Rest APIs, ML and Power BI. He has a natural ability to quickly grasp complex problems and translate them into effective, scalable solutions. Many times, the quality and impact of his work reflected a level of maturity well beyond his experience.
+
+Alben takes full ownership of his work and consistently delivers with minimal to no supervision. Once aligned on the objective, he executes with precision, attention to detail, and a strong sense of accountability. His work is thorough, reliable, and rarely requires rework.
+
+Beyond his technical strengths, he is highly dependable, committed, and someone you can trust with critical responsibilities. He would be a valuable asset to any organization, and I would gladly work with him again.`,
+    name: 'Akhil Raghupatruni',
+    initials: 'AR',
+    title: 'Senior Consultant',
+    institution: 'Capgemini',
+    accentColor: '#f59e0b',
     linkedin: 'https://www.linkedin.com/in/alben-antappan/details/recommendations/',
   },
 ]
@@ -130,7 +146,7 @@ export default function Testimonials() {
                       letterSpacing: '1px',
                     }}
                   >
-                    RJ
+                    {t.initials}
                   </div>
 
                   <div>
