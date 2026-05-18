@@ -7,42 +7,52 @@ const skillGroups = [
   {
     category: 'Core',
     color: '#5eead4',
-    skills: ['Python', 'SQL', 'R', 'Java', 'C/C++', 'Statistical Modeling', 'Feature Engineering', 'Data Wrangling', 'Automation'],
+    skills: ['Python', 'SQL', 'R', 'Java', 'C/C++', 'Statistical Modeling', 'Machine Learning', 'Predictive Modeling', 'Feature Engineering', 'Hypothesis Testing', 'Model Deployment', 'Model Validation', 'Data Wrangling', 'Automation'],
   },
   {
     category: 'Machine Learning',
     color: '#818cf8',
-    skills: ['Scikit-Learn', 'PyTorch', 'Pandas', 'NumPy', 'AWS SageMaker'],
+    skills: ['PyTorch', 'Scikit-Learn', 'XGBoost', 'Pandas', 'NumPy', 'Deep Learning', 'Computer Vision', 'OpenCV', 'Model Evaluation'],
   },
   {
-    category: 'AI',
+    category: 'Generative AI & LLM',
     color: '#c084fc',
-    skills: ['LLM', 'RAG', 'LangChain', 'LangSmith', 'FAISS', 'HuggingFace'],
+    skills: ['LLM', 'NLP', 'RAG', 'Transformers', 'Embeddings', 'Vector Search', 'LangChain', 'FAISS', 'HuggingFace', 'LangSmith', 'Arize'],
   },
   {
     category: 'Data Engineering',
     color: '#fb923c',
-    skills: ['PySpark', 'Spark', 'Kafka', 'Airflow', 'dbt', 'ETL', 'Distributed Processing', 'Relational Data Modeling'],
+    skills: ['ETL', 'PySpark', 'Spark', 'Kafka', 'Airflow', 'dbt', 'Hadoop', 'Distributed Processing', 'Relational Data Modeling'],
+  },
+  {
+    category: 'Databases',
+    color: '#f59e0b',
+    skills: ['MySQL', 'PostgreSQL', 'MSSQL', 'Oracle DB', 'SQLite', 'NoSQL', 'MongoDB', 'Neo4J'],
   },
   {
     category: 'Cloud & Platforms',
     color: '#38bdf8',
-    skills: ['AWS', 'S3', 'EC2', 'Lambda', 'SageMaker', 'GCP', 'BigQuery', 'Microsoft Azure', 'Microsoft Fabric', 'Snowflake'],
+    skills: ['AWS', 'S3', 'EC2', 'Lambda', 'SageMaker', 'SNS', 'SSM', 'GCP', 'BigQuery', 'Microsoft Azure', 'Microsoft Fabric', 'Snowflake'],
   },
   {
     category: 'Visualization & BI',
     color: '#f472b6',
-    skills: ['Power BI', 'Tableau', 'Looker', 'Grafana', 'Plotly', 'Matplotlib', 'Seaborn', 'DAX', 'Power Query'],
+    skills: ['Power BI', 'ArcGIS', 'Tableau', 'Looker', 'Grafana', 'DAX', 'Power Query', 'Plotly', 'Matplotlib', 'Seaborn'],
   },
   {
     category: 'Backend & APIs',
     color: '#34d399',
-    skills: ['Flask', 'FastAPI', 'RESTful API', 'Streamlit'],
+    skills: ['FastAPI', 'Flask', 'RESTful API', 'Streamlit'],
   },
   {
     category: 'DevOps & Tools',
     color: '#a78bfa',
-    skills: ['Git', 'GitHub Actions', 'CI/CD', 'Docker', 'SLURM', 'Apptainer', 'Bash', 'Shell'],
+    skills: ['Git', 'GitHub Actions', 'CI/CD', 'Docker', 'SLURM', 'Apptainer', 'Bash Scripting'],
+  },
+  {
+    category: 'Domain Knowledge',
+    color: '#f97316',
+    skills: ['Clinical NLP', 'OMOP Common Data Model', 'SNOMED', 'ICD'],
   },
 ]
 

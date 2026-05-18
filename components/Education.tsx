@@ -2,21 +2,20 @@
 
 import { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
-import Image from 'next/image'
 
 const degrees = [
   {
     university: 'Indiana University Bloomington',
     location: 'Bloomington, IN, USA',
     degree: 'Master of Science - Data Science',
-    gpa: '3.73 / 4.0',
+    gpa: '3.76 / 4.0',
     year: 'Aug 2024 - May 2026',
     logo: '/logos/iu.svg',
     accentColor: '#7C2529',
   },
   {
     university: 'University of Mumbai',
-    location: 'Mumbai, India',
+    location: 'Mumbai, MH, India',
     degree: 'Bachelor of Engineering - Information Technology',
     gpa: '8.54 / 10.0',
     year: 'Aug 2017 - Jun 2021',
@@ -110,12 +109,10 @@ export default function Education() {
 
             <div style={{ padding: '28px 32px', flex: 1, display: 'flex', flexDirection: 'column' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '14px', marginBottom: '24px' }}>
-                <Image
+                <img
                   src={d.logo}
                   alt={d.university}
-                  width={44}
-                  height={44}
-                  style={{ borderRadius: '8px', flexShrink: 0 }}
+                  style={{ width: 'auto', height: '44px', borderRadius: '8px', flexShrink: 0 }}
                 />
                 <div>
                   <div

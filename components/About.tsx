@@ -151,16 +151,16 @@ export default function About() {
           style={{ display: 'flex', flexDirection: 'column', gap: '20px', flex: 1 }}
         >
           <p style={{ fontSize: '17px', color: '#94a3b8', lineHeight: 1.9, textAlign: 'justify' }}>
-            I&apos;m a data scientist pursuing my MS in Data Science at Indiana University Bloomington,
-            currently doing research at the IU School of Medicine, building the pipelines that turn
-            raw neuroimaging data into structured, analysis-ready inputs for large-scale cohort modeling.
+            Data scientist with three years of industry experience and an MS in Data Science from
+            Indiana University Bloomington. Currently doing research at the IU School of Medicine,
+            building the pipelines that turn raw clinical data into structured, analysis-ready inputs
+            for large-scale cohort modeling.
           </p>
           <p style={{ fontSize: '17px', color: '#94a3b8', lineHeight: 1.9, textAlign: 'justify' }}>
             Before grad school, I spent three years at Capgemini as a Senior Analyst and Software
-            Engineer building financial data systems across 7 business units and 25+ global regions.
-            Predictive forecasting models, Power BI dashboards tracking global P&L, Flask APIs,
-            optimized SQL pipelines, and an ETL migration to Microsoft Fabric, owning the full stack
-            from data to insight.
+            Engineer building financial data systems for 7 business units across 25+ global regions -
+            Power BI dashboards, ETL pipelines, Flask APIs, and a full migration to Microsoft Fabric.
+            Owning the full stack from data to insight.
           </p>
           <p style={{ fontSize: '17px', color: '#94a3b8', lineHeight: 1.9, textAlign: 'justify' }}>
             That&apos;s still true today. I don&apos;t just build models, I build what makes them possible.

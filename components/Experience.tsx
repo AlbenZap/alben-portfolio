@@ -1,6 +1,5 @@
 'use client'
 
-import Image from 'next/image'
 import { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
@@ -12,15 +11,15 @@ const experiences = [
     year: 'Nov 2025 - Present',
     institution: 'Indiana University',
     department: 'School of Medicine',
-    location: 'Bloomington, IN',
+    location: 'Bloomington, IN, USA',
     role: 'Graduate Research Assistant',
     bullets: [
-      'Deployed an LLM inference pipeline on H100 GPU partitions using GPT and LLaMA models to extract 199 NACC-defined variables from neuropathology reports, implementing ground truth comparison for output validation across multiple runs.',
-      'Architected a fault-tolerant neuroimaging data ingestion pipeline on an HPC cluster using Slurm array jobs and Apptainer containers, processing MRI/fMRI/DTI datasets for 300+ subjects with full subject isolation.',
-      'Automated end-to-end neuroimaging preprocessing (DICOM - BIDS - fMRIPrep/QSIPrep/QSIRecon) via Bash scripting with robust error handling and logging, guaranteeing reliable parallel execution across distributed compute nodes.',
-      'Mapped structural and functional brain connectivity networks across multiple atlases, resolving data grouping anomalies and standardizing hierarchical structures for accurate regional statistical analysis.',
+      'Deployed a clinical NLP pipeline on H100 GPU partitions (HPC) using GPT and LLaMA transformer models to extract structured variables from unstructured clinical reports, evaluating output accuracy against expert-labeled ground truth.',
+      'Built Python signal denoising and feature extraction modules for multi-modal neuroimaging data (MRI, fMRI, DTI) across 300+ subjects, producing analysis-ready datasets for cohort-level statistical modeling.',
+      'Automated neuroimaging preprocessing workflows (fMRIPrep, QSIPrep/QSIRecon) on an HPC cluster, standardizing raw DICOM data to BIDS format to ensure consistent, high-quality inputs across the full subject cohort.',
+      'Mapped structural and functional brain connectivity networks across multiple neurological atlases, resolving data grouping anomalies and standardizing hierarchical relational structures to enable accurate downstream statistical analysis and cohort-level modeling.',
     ],
-    tags: ['Python', 'LLM', 'HPC', 'SLURM', 'Apptainer', 'Neuroimaging', 'FSL', 'FreeSurfer'],
+    tags: ['Python', 'LLM', 'NLP', 'HPC', 'SLURM', 'Apptainer', 'Neuroimaging', 'FSL', 'FreeSurfer'],
   },
   {
     accentColor: '#7C2529',
@@ -28,13 +27,13 @@ const experiences = [
     year: 'May - Aug 2025',
     institution: 'Indiana University',
     department: 'Kelley School of Business',
-    location: 'Bloomington, IN',
+    location: 'Bloomington, IN, USA',
     role: 'Graduate Research Assistant',
     bullets: [
-      'Built Python pipelines to scrape, clean, and transform large-scale FCC broadband and U.S. Census data across 10,000+ school districts, resolving schema inconsistencies and enabling the district-level joins that formed the backbone of a published education equity study.',
-      'Built reproducible R Markdown ETL workflows to standardize and harmonize 5 quarters of nurse engagement survey data across 70+ hospital units, producing correlation matrix visualizations across 13 survey dimensions for a healthcare operations study.',
+      'Engineered Python ETL pipelines to ingest, clean, and transform large-scale FCC broadband and U.S. Census data across 10,000+ school districts, resolving schema inconsistencies and building the district-level data model.',
+      'Built R-based data wrangling pipelines to harmonize 5 quarters of nurse engagement survey data across 70+ hospital units, producing statistical correlation matrix visualizations across 13 dimensions for a healthcare operations study.',
     ],
-    tags: ['Python', 'R', 'Data Wrangling', 'Statistical Analysis', 'Data Visualization'],
+    tags: ['Python', 'R', 'ETL', 'Data Wrangling', 'Statistical Analysis', 'Data Visualization'],
   },
   {
     accentColor: '#0070AD',
@@ -42,15 +41,15 @@ const experiences = [
     year: 'Jul 2021 - Jul 2024',
     institution: 'Capgemini',
     department: '',
-    location: 'Mumbai, India',
+    location: 'Mumbai, MH, India',
     role: 'Senior Analyst / Software Engineer',
     bullets: [
-      'Engineered scalable Python and SQL-based ETL pipelines for a global financial platform across 7 business units and 25+ regions, encoding complex business logic to replace manual Excel workflows and improve reporting accuracy by 15%.',
-      'Architected a self-service web portal backend using Flask and RESTful APIs, enabling automated real-time report generation and powering interactive Power BI dashboards tracking global P&L and financial KPIs.',
-      'Led end-to-end POC for enterprise migration of legacy ETL workflows to Microsoft Fabric, rebuilding the full system architecture and data transformation layer to reduce querying latency and improve scalability.',
-      'Optimized time-series forecasting simulations incorporating ARIMA models, achieving 25% faster execution through Python refactoring and MySQL query tuning while maintaining statistical validity.',
+      'Engineered SQL and Python-based ETL pipelines to automate financial reporting across 7 business units and 25+ global regions, replacing error-prone Excel workflows and improving reporting accuracy by 15%, enabling leadership to make faster, data-driven decisions at scale.',
+      'Developed interactive Power BI dashboards tracking global P&L and financial KPIs for senior leadership, backed by Flask APIs and optimized SQL pipelines, cutting ad-hoc reporting requests and delivering real-time business intelligence.',
+      'Led end-to-end POC for migrating legacy ETL workflows and analytics dashboards to Microsoft Fabric, redesigning the data transformation layer and validating the full system architecture to reduce query latency and improve scalability.',
+      'Tuned ARIMA model parameters and engineered input features for time-series forecasting simulations, validating model performance against holdout data and optimizing execution pipeline to reduce runtime by 25%.',
     ],
-    tags: ['Python', 'SQL', 'Flask', 'REST API', 'Power BI', 'ETL', 'Microsoft Fabric', 'MySQL', 'ARIMA'],
+    tags: ['Python', 'SQL', 'Flask', 'REST API', 'Power BI', 'ETL', 'Microsoft Fabric', 'ARIMA'],
   },
 ]
 
@@ -220,12 +219,10 @@ export default function Experience() {
                 />
 
                 <div style={{ marginBottom: '10px' }}>
-                  <Image
+                  <img
                     src={exp.logo}
                     alt={exp.institution}
-                    width={48}
-                    height={48}
-                    style={{ objectFit: 'contain', display: 'block' }}
+                    style={{ width: 'auto', height: '48px', objectFit: 'contain', display: 'block' }}
                   />
                 </div>
 

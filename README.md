@@ -7,9 +7,9 @@ Personal portfolio built with Next.js, React 19, GSAP, and Lenis smooth scroll.
 - **Framework:** Next.js (App Router)
 - **Language:** TypeScript
 - **Animations:** GSAP 3 + ScrollTrigger, CSS keyframes
-- **Smooth scroll:** @studio-freight/lenis
+- **Smooth scroll:** lenis
 - **Styling:** Inline styles + CSS modules (globals.css)
-- **PDF viewer:** react-pdf-viewer (local worker, no CDN)
+- **PDF viewer:** react-pdf (pdfjs worker via unpkg CDN)
 
 ## Getting Started
 
@@ -31,8 +31,7 @@ app/          # Next.js App Router (layout, page, globals.css)
 components/   # All page sections and UI components
 public/
   logos/      # Org logos (SVG)
-  images/     # Project diagrams, profile photo
+  images/     # Profile photo
   resume.pdf
-  pdf.worker.min.js
 lib/          # GSAP singleton config
 ```

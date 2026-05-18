@@ -64,7 +64,7 @@ const contactItems = [
   },
   {
     icon: <LocationIcon />,
-    label: 'Bloomington, IN',
+    label: 'Bloomington, IN, USA',
     href: null,
     external: false,
   },
